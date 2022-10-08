@@ -1,0 +1,114 @@
+/*----------------------------------------------------------------*/
+/* Hoja de estilos                                                */
+/*----------------------------------------------------------------*/
+
+body{
+    background-color: #202020;
+}
+
+
+
+/*----------------------------------------------------------------*/
+/*  grid                                   */
+/*----------------------------------------------------------------*/
+
+.container {
+    display: grid;
+
+    /* Uso un atajo para definir 3 filas y dos columnas */
+    grid-template: 72px 40px 1fr 40px / 14% 64.5% 21%;
+
+    /* Distribuimos el contenido en cada fila */
+    grid-template-areas: "header header header" "nav nav nav" "contenido contenido contenido" "pie pie pie";
+
+    /* separamos los items con gap */
+    gap: 6px;
+
+    /* Hacemos que el diseño ocupe casi el alto total del navegador */
+    height: 98vh;   
+}
+
+
+/*----------------------------------------------------------------*/
+/* nombre de cada area del grid                 */
+/*----------------------------------------------------------------*/
+.header    { grid-area: header; }
+.nav       { grid-area: nav;   }
+.index     { grid-area: index;    }
+.contenido { grid-area: contenido; }
+.contenidoImg { grid-area: contenidoImg;}
+.pie       { grid-area: pie;      }
+
+
+/*----------------------------------------------------------------*/
+/* apariencia de cada item del grid                  */
+/*----------------------------------------------------------------*/
+.item {
+    background-color: #2d2d2e;
+    padding: 11px;
+    color: white;
+    border-radius: 7px;
+    overflow: auto;
+}
+
+
+/*----------------------------------------------------------------*/
+/* Imagenes con bordes redondeados, con limites de tamaño           */
+/*----------------------------------------------------------------*/
+img {
+    border-radius: 10%;
+    width: 180px;
+    height:180px;
+  }
+
+.logo {
+    border-radius: 0%;
+    width: 50px;
+    height:50px;
+    vertical-align: middle;
+    float: left;
+}
+
+/* Barra de navegación con hover y que muestre el actual */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #2d2d2e;
+  }
+li{
+    float: left;
+  }
+li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 11px 16px;
+}
+
+a:hover:not(.active){
+    background-color: #9b9b9b;
+}
+
+.active{
+    background-color: #bb8510;
+}
+
+
+
+/*saco color de links*/
+a{
+    color:white
+}
+a:link{
+    color: white;
+    text-decoration: none;
+}
+a:visited{
+    color: whitesmoke;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
