@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    
     <div class="container">
 
         <div class="item header" style="text-align: center; line-height: 50px;">
@@ -26,15 +27,69 @@
                 <li><a href="inicio.html">Inicio</a></li>
                 <li><a href="historia.html">Historia</a></li>
                 <li><a  href="partesPC.html">Partes</a></li>
-                <li><a href="sobreNos.html">Sobre nos</a></li>
+                <li><a href="sobreNos.html">Sobre nosotros</a></li>
                 <li><a class="active"   href="contacto.html">Contacto</a></li>
               </ul>
         </div>      
 
 
         <div class="item contenido" style="padding: 20px ;">
-            <p style="text-align: center;">
-                aca iria algun form con validacion javascript</p>
+            <p style="text-align: center">Envianos tu opinión o sugerencia!</p> <br>
+            <form name="formContacto" id="fc">
+                <table>
+                    <tr>
+                        <td align="center"><br>Nombre: </td>
+                        <td><br><input type="text" name="nombre" size="30" maxlength="60"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"><br>E-mail: </td>
+                        <td><br><input type="email" name="email" size="45"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"><br>Edad: </td>
+                        <td><br><input type="number" name="edad" size="3" maxlength="3"></td>
+                    </tr>
+                    <tr>
+                        <td align="center"><br>Comentario:&nbsp; </td>
+                        <td><br><textarea name="comentario" cols="50" rows="4"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><br></td>
+                        <td><br><input type="reset" value="Vaciar formulario">&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" id="botonEnvio" value="Enviar" onclick="validarForm()"></td> 
+                    </tr>
+                </table>
+            </form>
+
+            <script>
+                var reg= /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+                function validarForm(){
+                    if(document.formContacto.nombre.value.length <=3){
+                        alert("El nombre ingresado debe contener al menos 4 caracteres")
+                        document.formContacto.nombre.focus()
+                        return 0;
+                    }
+                    /*alert(reg.test(document.formContacto.email.value));*/
+                    if(!(reg.test(document.formContacto.email.value))){
+                        alert("ingrese un email valido")
+                        document.formContacto.email.focus()
+                        return 0;
+                    }
+                    if(document.formContacto.edad.value < 10 || document.formContacto.edad.value >99 ){
+                        alert("La edad debe ser un número positivo de dos cifras")
+                        document.formContacto.edad.focus()
+                        return 0;
+                    }
+                    if(document.formContacto.comentario.value ==""){
+                        alert("Ingrese un comentario")
+                        document.formContacto.comentario.focus()
+                        return 0;
+                    }
+                    alert("gracias por su participación");
+                    document.formContacto.submit();
+                }
+            </script>
+
+
         </div>
 
 
