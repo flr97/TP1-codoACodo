@@ -4,6 +4,7 @@
 
 body{
     background-color: #202020;
+    background-image: url("IMG/Background.png");
 }
 
 
@@ -16,7 +17,7 @@ body{
     display: grid;
 
     /* Uso un atajo para definir 3 filas y dos columnas */
-    grid-template: 72px 40px 1fr 40px / 14% 64.5% 21%;
+    grid-template: 74px 40px 1fr 40px / 14% 64.5% 21%;
 
     /* Distribuimos el contenido en cada fila */
     grid-template-areas: "header header header" "nav nav nav" "index contenido contenidoImg" "pie pie pie";
@@ -32,11 +33,11 @@ body{
 /*----------------------------------------------------------------*/
 /* nombre de cada area del grid                 */
 /*----------------------------------------------------------------*/
-.header    { grid-area: header; }
+.header    { grid-area: header; font-size: 40px; font-family: 'Garamond'; font-style: italic;}
 .nav       { grid-area: nav;   }
 .index     { grid-area: index;    }
-.contenido { grid-area: contenido; }
-.contenidoImg { grid-area: contenidoImg;}
+.contenido { grid-area: contenido; font-size: 16px; font-family: Verdana;}
+.contenidoImg { grid-area: contenidoImg; font-family: Verdana;}
 .pie       { grid-area: pie;      }
 
 
@@ -44,7 +45,7 @@ body{
 /* apariencia de cada item del grid                  */
 /*----------------------------------------------------------------*/
 .item {
-    background-color: #2d2d2e;
+    background-color: #2d2d2eec;
     padding: 11px;
     color: white;
     border-radius: 7px;
@@ -57,6 +58,7 @@ body{
 /*----------------------------------------------------------------*/
 img {
     border-radius: 10%;
+    border: 3px solid #bb8510;
     width: 180px;
     height:180px;
   }
@@ -65,6 +67,7 @@ img {
     border-radius: 0%;
     width: 50px;
     height:50px;
+    border: 0px ;
     vertical-align: middle;
     float: left;
 }
@@ -75,7 +78,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #2d2d2e;
+    background-color: #2d2d2eec;
   }
 li{
     float: left;
