@@ -33,10 +33,10 @@ body{
 /*----------------------------------------------------------------*/
 /* nombre de cada area del grid                 */
 /*----------------------------------------------------------------*/
-.header    { grid-area: header; font-size: 40px; font-family: 'Garamond'; font-style: italic;}
+.header    { grid-area: header; font-size: 40px; font-family: 'Garamond'; font-style: italic; text-shadow: 0 0 4px #fa4646;}
 .nav       { grid-area: nav;   }
 .index     { grid-area: index;    }
-.contenido { grid-area: contenido; font-size: 16px; font-family: Verdana;}
+.contenido { grid-area: contenido; font-size: 16px; font-family: Verdana ; line-height: 21px; }
 .contenidoImg { grid-area: contenidoImg; font-family: Verdana;}
 .pie       { grid-area: pie;      }
 
@@ -57,9 +57,9 @@ body{
 /* Imagenes con bordes redondeados, con limites de tamaño           */
 /*----------------------------------------------------------------*/
 img {
-    border-radius: 10%;
-    width: 180px;
-    height:180px;
+    border-radius: 50%;
+    width: 380px;
+    height:280px;
   }
 
 .logo {
