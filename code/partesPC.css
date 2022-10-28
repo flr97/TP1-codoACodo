@@ -23,7 +23,7 @@
 /*----------------------------------------------------------------*/
 /* nombre de cada area del grid                 */
 /*----------------------------------------------------------------*/
-.header    { grid-area: header; font-size: 40px; font-family: 'Garamond'; font-style: italic; text-shadow: 0 0 4px #1D3557;}
+.header    { grid-area: header; font-size: 40px; font-family: 'Garamond'; font-style: italic; text-shadow: 0 0 4px #3993DD;}
 .nav       { grid-area: nav;   }
 .index     { grid-area: index;    }
 .contenido { grid-area: contenido; font-size: 18px; font-family: Verdana ; line-height: 27px; }
