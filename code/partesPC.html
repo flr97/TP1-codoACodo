@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="stylesheet.css">
     <link rel="stylesheet" href="partesPC.css">
     <link rel="icon" href="IMG/logo.png">
     <title>Partes PC - CompuFans</title>
@@ -13,7 +15,7 @@
 <body>
     <div class="container">
 
-        <div class="item header" style="text-align: center; line-height: 50px; border: 1px solid #bb8510;">
+        <div class="item header" style="text-align: center; line-height: 50px; border: 1px solid #1D3557;">
             <img class="logo"src="IMG/logo.png">
            
             <b>CompuFans</b>
@@ -32,9 +34,11 @@
               </ul>
         </div>      
 
-        <div class="item index" style="padding: 10px; border: 1px solid #bb8510; ">
+        <div class="item index" style="padding: 10px; border: 1px solid #1D3557; ">
         
             <br>
+            <button onclick="cambioAIntro()" class="boton">Introducción</button>
+           <br><br>
            <button onclick="cambioAProcesador()" class="boton">Procesador</button>
            <br><br>
            <button onclick="cambioAMemoria()" class="boton">Memoria</button>
@@ -49,62 +53,106 @@
 
         </div>
 
-        <div class="item contenido" id="contenido" style="padding: 30px ; border: 1px solid #bb8510;">
+        <div class="item contenido" id="contenido" style="padding: 30px ; border: 1px solid #1D3557;">
+            <h2>Intro</h2>
             <p>
                 Una Computadora es una máquina electrónica digital programable que ejecuta una serie de comandos para procesar los datos de entrada, obteniendo información que se envía a las unidades de salida. </p>
                 <p>Desde el punto de vista funcional, una computadora debe poseer al menos un CPU, una memoria y un dispositivo de entrada/salida, aunque existen otros componentes auxiliares que pueden ampliar su capacidad o asistir en conseguir una mejor experiencia para el usuario.<br>Además dependiendo de las especificaciones de la computadora, puede ser requerido distintos tipos de fuente de alimentación para garantizar una correcta alimentación energetica de los componentes</p>
                 <p>En este segmento de la página, hablaremos de la mayoria de los componentes principales de una computadora.</p>
+                <br>
+                <iframe width="420" height="315"  style="border: 1px solid #1D3557; display: block; margin-right: auto; margin-left: auto;"
+                src="https://www.youtube.com/embed/xL8C5CIxDts">
+                </iframe> 
         </div>
 
-        <div class="item contenidoImg" id="imagenes" style="border: 1px solid#bb8510;">
-            <img class=img src=IMG/intro.png> Partes de una computadora de escritorio <br>
+        <div class="item contenidoImg" id="imagenes" style="border: 1px solid#1D3557;">
+            <br><img class=img src=IMG/intro.png> Partes de una computadora de escritorio <br>
         </div>
 
-        <div class="item pie">Pie de página</div>
+        <div class="item pie" style="text-align: right;"><a  href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram" style="font-size:18px"></i></a>&nbsp;&nbsp;<a  href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter-square" style="font-size:18px"></i></a>&nbsp;&nbsp; CompuFans <i class="fa fa-copyright" style="color:#3993DD"></i></div>
         
     </div>
 
 <script>
+
+    function cambioAIntro(){
+        let cont = document.getElementById("contenido")
+        let imag =document.getElementById("imagenes")
+        cont.innerHTML=`<h2>Intro</h2>
+        <p>
+            Una Computadora es una máquina electrónica digital programable que ejecuta una serie de comandos para procesar los datos de entrada, obteniendo información que se envía a las unidades de salida. </p>
+            <p>Desde el punto de vista funcional, una computadora debe poseer al menos un CPU, una memoria y un dispositivo de entrada/salida, aunque existen otros componentes auxiliares que pueden ampliar su capacidad o asistir en conseguir una mejor experiencia para el usuario.<br>Además dependiendo de las especificaciones de la computadora, puede ser requerido distintos tipos de fuente de alimentación para garantizar una correcta alimentación energetica de los componentes</p>
+            <p>En este segmento de la página, hablaremos de la mayoria de los componentes principales de una computadora.</p>
+            <br>
+            <iframe width="420" height="315"  style="border: 1px solid #1D3557; display: block; margin-right: auto; margin-left: auto;"
+            src="https://www.youtube.com/embed/xL8C5CIxDts">
+            </iframe>  `
+        imag.innerHTML=` <br><img class=img src=IMG/intro.png> Partes de una computadora de escritorio <br>
+        ` 
+    }
+
+
+
     function cambioAProcesador(){
         let cont = document.getElementById("contenido")
         let imag =document.getElementById("imagenes")
-        cont.innerHTML="<p>Es el circuito integrado más complejo de un sistema informático.<br><br>Es el encargado de la ejecución de programas. Ejecuta instrucciones en lenguaje de máquina realizando operaciones aritméticas y lógicas simples, puede contener uno o más CPU.<br>El rendimiento puede ser medido de distintas maneras como su arquitectura(memoria cache, registros, unidad de coma flotante, etc), su frecuencia de reloj y sus núcleos.</p> <p>Debido a las altas temperaturas que puede levantar su funcionamiento, se le suele incorporar un sistema de refrigeración que consta de un disipador de calor y ventiladores, otra alternativa para la refrigeración puede ser la refrigeración líquida. </p> <br><p>CPU: <br><br>Un CPU está compuesto de tres elementos principales: <br><br>-Unidad aritmética lógica(ALU): dispositivo que resuelve operaciones aritméticas y lógicas.<br><br>-Unidad de Control: sigue la direcciones de memoria que contienen las instrucciones a realizar en ese momento, recupera la información pasándosela a la ALU para que haga las operaciones necesarias, una vez realizado esto va a la siguiente instrucción.<br><br>-Registros: Contienen información actualizable para la realización de las instrucciones: no accesibles (de instrucción, de bus de datos y bus de dirección) y accesibles, uso específico (contador programa, puntero pila, acumulador, flags, etc.) o de uso general.  </p>";
-        imag.innerHTML="<img class=img src=IMG/proces1.png> procesador intel <br><br> <img class=img src=IMG/proces2.png> esquema arquitectura procesador <br>"
+        cont.innerHTML=`<h2>Procesador</h2><p>Es el circuito integrado más complejo de un sistema informático.<br><br>
+            Es el encargado de la ejecución de programas. Ejecuta instrucciones en lenguaje de máquina realizando operaciones aritméticas y lógicas simples, puede contener uno o más CPU.<br>
+            El rendimiento puede ser medido de distintas maneras como su arquitectura(memoria cache, registros, unidad de coma flotante, etc), su frecuencia de reloj y sus núcleos.</p>
+             <p>Debido a las altas temperaturas que puede levantar su funcionamiento, se le suele incorporar un sistema de refrigeración que consta de un disipador de calor y ventiladores, otra alternativa para la refrigeración puede ser la refrigeración líquida. </p> <br>
+             <p>CPU: <br><br>Un CPU está compuesto de tres elementos principales: <br><br>
+                -Unidad aritmética lógica(ALU): dispositivo que resuelve operaciones aritméticas y lógicas.<br><br>
+                -Unidad de Control: sigue la direcciones de memoria que contienen las instrucciones a realizar en ese momento, recupera la información pasándosela a la ALU para que haga las operaciones necesarias, una vez realizado esto va a la siguiente instrucción.<br><br>
+                -Registros: Contienen información actualizable para la realización de las instrucciones: no accesibles (de instrucción, de bus de datos y bus de dirección) y accesibles, uso específico (contador programa, puntero pila, acumulador, flags, etc.) o de uso general.  </p>`;
+        imag.innerHTML="<br><img class=img src=IMG/proces1.png> procesador intel <br><br> <img class=img src=IMG/proces2.png> esquema arquitectura procesador <br>"
     }
 
     function cambioAMemoria(){
         let cont = document.getElementById("contenido")
         let imag =document.getElementById("imagenes")
-        cont.innerHTML="<p>La memoria principal, conocida como memoria de acceso aleatorio (RAM) es un conjunto de celdas de almacenamiento que se pueden acceder numéricamente a la dirección de memoria. Cada celda corresponde a un bit. La capacidad de la memoria se da por el número de celdas que contiene. </p> <p>En los bytes de la memoria se almacenan tanto los datos como los códigos de operación necesarios para llevar a cabo las instrucciones.  Además es donde el sistema operativo almacena todos los programas y procesos en ejecución.  </p> <p> Se denomina de acceso aleatorio ya que no necesita ser accedida siguiendo un orden, es decir, se puede acceder a cualquier posición de memoria con un tiempo de espera igual independientemente de su ubicación física, lo que permite que se pueda acceder a cualquier dato necesario en poco tiempo.</p> <p>Este tipo de memoria puede ser reescrita millones de veces sin problema alguno. </p>";
-        imag.innerHTML="<img class=img src=IMG/ram.png> memorias RAM de distintas tecnologías <br><br>"
+        cont.innerHTML=`<h2>Memoria</h2><p>La memoria principal, conocida como memoria de acceso aleatorio (RAM) es un conjunto de celdas de almacenamiento que se pueden acceder numéricamente a la dirección de memoria. Cada celda corresponde a un bit. La capacidad de la memoria se da por el número de celdas que contiene. </p> 
+        <p>En los bytes de la memoria se almacenan tanto los datos como los códigos de operación necesarios para llevar a cabo las instrucciones.  Además es donde el sistema operativo almacena todos los programas y procesos en ejecución.  </p> 
+        <p> Se denomina de acceso aleatorio ya que no necesita ser accedida siguiendo un orden, es decir, se puede acceder a cualquier posición de memoria con un tiempo de espera igual independientemente de su ubicación física, lo que permite que se pueda acceder a cualquier dato necesario en poco tiempo.</p> 
+        <p>Este tipo de memoria puede ser reescrita millones de veces sin problema alguno. </p>`;
+        imag.innerHTML="<br><img class=img src=IMG/ram.png> memorias RAM de distintas tecnologías <br><br>"
     }
 
     function cambioAAlmacen(){
         let cont = document.getElementById("contenido")
         let imag =document.getElementById("imagenes")
-        cont.innerHTML="<p>En las decadas recientes, existieron diversos dispositivos de almacenamiento de distintos tipos de tecnologia,</p> <p>Dispositivos magnéticos:<br>-disquetes: formado por un disco magnetizable y flexible encerrada en una cubierta de plástico rectangular. Su capacidad era baja rondando entre 79KB y 240 MB <br>-Unidad de disco duro (HDD): se compone de uno o más platos o discos rígidos, recubiertos de material magnético unidos por un mismo eje que gira a gran velocidad dentro de una caja sellada. Sobre cada plato se situa un cabezal de lectura/escritura. Permite el acceso aleatorio a los datos, es decir, acceso no secuencial. Su capacidad shoy en día supera los Terabytes. Siguen siendo utilizados aunque cada vez es más comun la utilización de SSD para reemplazarlos </p> <p>Dispositivos ópticos:<br> son elementos que utilizan una luz láser para la lectura/escritura de datos, fueron el reemplazo de las disqueteras debido a su bajo coste. <br> Los discos compactos(CD), discos versátiles digitales (DVD) y discos Blu-ray son los tipos más comunes.</p> <p>Unidad de estado sólido (SSD): <br> se caracterizan de utilizar memorias flash para el almacenamiento de datos, que poseen mayor velocidad de acceso y menor consumo eléctrico que las opciones anteriores. <br> memorias USB, tarjetas SD , entre otras, también utilizan esta tecnologia. </p>"
-        imag.innerHTML="<img class=img src=IMG/almac1.png> dispositivos varios <br><br> <img class=img src=IMG/almac2.png> HDD vs SDD <br><br>"
+        cont.innerHTML=`<h2>Dispositivos de almacenamiento</h2><p>En las decadas recientes, existieron diversos dispositivos de almacenamiento de distintos tipos de tecnologia,</p> 
+        <p>Dispositivos magnéticos:<br>-disquetes: formado por un disco magnetizable y flexible encerrada en una cubierta de plástico rectangular. Su capacidad era baja rondando entre 79KB y 240 MB <br>-Unidad de disco duro (HDD): se compone de uno o más platos o discos rígidos, recubiertos de material magnético unidos por un mismo eje que gira a gran velocidad dentro de una caja sellada. Sobre cada plato se situa un cabezal de lectura/escritura. Permite el acceso aleatorio a los datos, es decir, acceso no secuencial. Su capacidad shoy en día supera los Terabytes. Siguen siendo utilizados aunque cada vez es más comun la utilización de SSD para reemplazarlos </p> 
+        <p>Dispositivos ópticos:<br> son elementos que utilizan una luz láser para la lectura/escritura de datos, fueron el reemplazo de las disqueteras debido a su bajo coste. <br> Los discos compactos(CD), discos versátiles digitales (DVD) y discos Blu-ray son los tipos más comunes.</p>
+        <p>Unidad de estado sólido (SSD): <br> se caracterizan de utilizar memorias flash para el almacenamiento de datos, que poseen mayor velocidad de acceso y menor consumo eléctrico que las opciones anteriores. <br> memorias USB, tarjetas SD , entre otras, también utilizan esta tecnologia. </p>`
+        imag.innerHTML="<br><img class=img src=IMG/almac1.png> dispositivos varios <br><br> <img class=img src=IMG/almac2.png> HDD vs SDD <br><br>"
     }
 
     function cambioAMother(){
         let cont = document.getElementById("contenido")
         let imag =document.getElementById("imagenes")
-        cont.innerHTML="<p>Parte fundamental para cualquier computadora personal, tiene instalado una serie de circuitos integrados y sirve como centro de conexión para todos los componentes de la computadora.</p> <p>Incluye un firmware llamado BIOS que permite realizar funciones básicas como reconocimiento de dispositivos y carga del sistema operativo</p> <p>Uno de sus elementos principales es el Chipset, que es un conjunto de cirtuitos electrónicos que gestiona la transferencia de datos entre los componentes. Esta dividido en dos secciones: <br>-Puente Norte: gestiona la interconexión entre el procesador, la memoria RAM y la unidad de proceso gráfico(GPU)<br>-Puente sur: gestiona la interconexión entre periféricos y dispositivos de almacenamiento.  </p> <p>Otros elementos importantes son el reloj que regula y sincroniza la velocidad de ejecución de las instrucciones, Buses que son las conexiones físicas entre los componentes y diversos puertos y conectores que permiten conectar distintos tipos de componentes. </p>"
-        imag.innerHTML="<img class=img src=IMG/mother1.png> motherboard y sus partes <br><br>"
+        cont.innerHTML=`<h2>Motherboard</h2><p>Parte fundamental para cualquier computadora personal, tiene instalado una serie de circuitos integrados y sirve como centro de conexión para todos los componentes de la computadora.</p> <p>Incluye un firmware llamado BIOS que permite realizar funciones básicas como reconocimiento de dispositivos y carga del sistema operativo</p>
+        <p>Uno de sus elementos principales es el Chipset, que es un conjunto de cirtuitos electrónicos que gestiona la transferencia de datos entre los componentes. Esta dividido en dos secciones: <br>-Puente Norte: gestiona la interconexión entre el procesador, la memoria RAM y la unidad de proceso gráfico(GPU)<br>-Puente sur: gestiona la interconexión entre periféricos y dispositivos de almacenamiento.  </p>
+        <p>Otros elementos importantes son el reloj que regula y sincroniza la velocidad de ejecución de las instrucciones, Buses que son las conexiones físicas entre los componentes y diversos puertos y conectores que permiten conectar distintos tipos de componentes. </p>`
+        imag.innerHTML="<br><img class=img src=IMG/mother1.png> motherboard y sus partes <br><br>"
     }
 
     function cambioAGraphic(){
         let cont = document.getElementById("contenido")
         let imag =document.getElementById("imagenes")
-        cont.innerHTML="Una placa o tarjeta de video es una expansión de la placa base, que se encarga de procesar datos provenientes del procesador y transformarlos en información comprensible para dispositivos de salida como monitores. <br> Estas tarjetas utilizan una unidad de procesamiento gráfico (GPU) </p> <p>Muchos procesadores o algunas placas base traen su propio hardware de video, por lo que no es necesario poseer una tarjeta de video para el funcionamiento general de la computadora, pero estos componentes integrados no suelen tener demasiada potencia por lo que si se necesita la computadora para la ejecución de programas que utilicen elementos gráficos de manera exhaustiva, una placa de video dedicada es necesaria. </p>"
-        imag.innerHTML="<img class=img src=IMG/graf1.png> varias placas <br><br> <img class=img src=IMG/graf2.png> componentes placa <br><br>"
+        cont.innerHTML=`<h2>Placa de viedo</h2>Una placa o tarjeta de video es una expansión de la placa base, que se encarga de procesar datos provenientes del procesador y transformarlos en información comprensible para dispositivos de salida como monitores. <br> 
+        Estas tarjetas utilizan una unidad de procesamiento gráfico (GPU) </p> 
+        <p>Muchos procesadores o algunas placas base traen su propio hardware de video, por lo que no es necesario poseer una tarjeta de video para el funcionamiento general de la computadora, pero estos componentes integrados no suelen tener demasiada potencia por lo que si se necesita la computadora para la ejecución de programas que utilicen elementos gráficos de manera exhaustiva, una placa de video dedicada es necesaria. </p>`
+        imag.innerHTML="<br><img class=img src=IMG/graf1.png> varias placas <br><br> <img class=img src=IMG/graf2.png> componentes placa <br><br>"
     }
 
     function cambioAES(){
         let cont = document.getElementById("contenido")
         let imag =document.getElementById("imagenes")
-        cont.innerHTML="<p> Son elementos esenciales para la interacción usuario-computadora. Sin ellos sería imposible adaptar el uso de la computadora a las necesidades individuales de cada usuario. Se pueden dividir en los siguientes tipos:</p> <p>-Entrada:<br>Son los que permiten introducir datos externos a la computadora para su posterior tratamiento por parte de la CPU. Estos datos pueden provenir de distintas fuentes, siendo la principal un ser humano. Algunos ejemplos son: teclado, mouse, micrófono, etc.<p/><p>-Salida: <br>Los periféricos de salida reciben la información procesada por la CPU y la reproducen, de modo que sea perceptible por el usuario. Algunos ejemplos son: Monitor, impresora, auriculares, etc </p> <p>-Entrada y salida:Los periféricos de entrada/salida son los que utiliza la computadora para mandar y para recibir información. Su función es la de almacenar o guardar, de forma permanente o virtual, todo aquello que hagamos con la computadora para que pueda ser utilizado por los usuarios u otros sistemas. Un ejemplo sería una pantalla táctil.<br> </p>"
-        imag.innerHTML="<img class=img src=IMG/dispoES.png> dispositivos varios <br><br>"
+        cont.innerHTML=`<h2>Dispositivos de Entrada y Salida</h2><p> Son elementos esenciales para la interacción usuario-computadora. Sin ellos sería imposible adaptar el uso de la computadora a las necesidades individuales de cada usuario. Se pueden dividir en los siguientes tipos:</p> 
+        <p>-Entrada:<br>Son los que permiten introducir datos externos a la computadora para su posterior tratamiento por parte de la CPU. Estos datos pueden provenir de distintas fuentes, siendo la principal un ser humano. Algunos ejemplos son: teclado, mouse, micrófono, etc.<p/>
+        <p>-Salida: <br>Los periféricos de salida reciben la información procesada por la CPU y la reproducen, de modo que sea perceptible por el usuario. Algunos ejemplos son: Monitor, impresora, auriculares, etc </p> 
+        <p>-Entrada y salida:Los periféricos de entrada/salida son los que utiliza la computadora para mandar y para recibir información. Su función es la de almacenar o guardar, de forma permanente o virtual, todo aquello que hagamos con la computadora para que pueda ser utilizado por los usuarios u otros sistemas. Un ejemplo sería una pantalla táctil.<br> </p>`
+        imag.innerHTML="<br><img class=img src=IMG/dispoES.png> dispositivos varios <br><br>"
     }
 
 

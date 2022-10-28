@@ -3,7 +3,7 @@
 /*----------------------------------------------------------------*/
 
 body{
-    background-color: #202020;
+    background-color: #d3c7cb;
     background-image: url("IMG/Background.png");
 }
 
@@ -16,9 +16,9 @@ body{
 .container {
     display: grid;
 
-    /* Uso un atajo para definir 3 filas y dos columnas */
-    grid-template: 74px 40px 1fr 40px / 14% 64.5% 21%;
-
+ 
+    grid-template: 74px 42px 1fr 42px / 14% 64.5% 21%;
+    
     /* Distribuimos el contenido en cada fila */
     grid-template-areas: "header header header" "nav nav nav" "contenido contenido contenido" "pie pie pie";
 
@@ -30,44 +30,38 @@ body{
 }
 
 
+/*3 fuentes distintas usadas: garamond, verdana, times new roman(creo que es la default)    */
+
+
 /*----------------------------------------------------------------*/
 /* nombre de cada area del grid                 */
 /*----------------------------------------------------------------*/
-.header    { grid-area: header; font-size: 40px; font-family: 'Garamond'; font-style: italic; text-shadow: 0 0 4px #fa4646;}
+.header    { grid-area: header; font-size: 40px; font-family: 'Garamond'; font-style: italic; text-shadow: 0 0 4px #3993DD;}
 .nav       { grid-area: nav;   }
 .index     { grid-area: index;    }
-.contenido { grid-area: contenido; font-size: 16px; font-family: Verdana ; line-height: 21px; }
+.contenido { grid-area: contenido; font-size: 18px; font-family: Verdana ; line-height: 21px; }
 .contenidoImg { grid-area: contenidoImg; font-family: Verdana;}
-.pie       { grid-area: pie;      }
-
-
+.pie       { grid-area: pie;    }
 
 
 /*----------------------------------------------------------------*/
 /* apariencia de cada item del grid                  */
 /*----------------------------------------------------------------*/
 .item {
-    background-color: #2d2d2eec;
+    background-color: #F0E2E7ec;
     padding: 11px;
-    color: white;
+    color: black;
     border-radius: 7px;
     overflow: auto;
 }
 
 
-/*----------------------------------------------------------------*/
-/* Imagenes con bordes redondeados, con limites de tamaño           */
-/*----------------------------------------------------------------*/
-img {
-    border-radius: 10%;
-    width: 180px;
-    height:180px;
-  }
 
 .logo {
     border-radius: 0%;
-    width: 50px;
+    width: 60px;
     height:50px;
+    border: 0px ;
     vertical-align: middle;
     float: left;
 }
@@ -78,14 +72,14 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #2d2d2eec;
+    background-color: #F0E2E7ec;
   }
 li{
     float: left;
   }
 li a{
     display: block;
-    color: white;
+    color: black;
     text-align: center;
     padding: 11px 16px;
 }
@@ -95,23 +89,27 @@ a:hover:not(.active){
 }
 
 .active{
-    background-color: #bb8510;
+    background-color: #3993DD;
+    border: 1px solid #1D3557;
 }
 
 
 
 /*saco color de links*/
 a{
-    color:white
+    color:black
 }
 a:link{
-    color: white;
+    color: black;
     text-decoration: none;
 }
 a:visited{
-    color: whitesmoke;
+    color: rgb(15, 15, 15);
     text-decoration: none;
 }
 a:hover{
     text-decoration: underline;
 }
+
+
+  

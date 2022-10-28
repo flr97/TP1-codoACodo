@@ -1,23 +1,14 @@
-/*----------------------------------------------------------------*/
-/* Hoja de estilos                                                */
-/*----------------------------------------------------------------*/
-
-body{
-    background-color: #202020;
-    background-image: url("IMG/Background.png");
-}
-
-
 
 /*----------------------------------------------------------------*/
 /*  grid                                   */
 /*----------------------------------------------------------------*/
 
-.container {
+ /*tamaño grande*/
+ .container {
     display: grid;
 
-    /* Uso un atajo para definir 3 filas y dos columnas */
-    grid-template: 74px 40px 1fr 40px / 10.5% 64.5% 24.5%;
+
+    grid-template: 74px 42px 1fr 40px / 10.5% 64.5% 24.5%;
 
     /* Distribuimos el contenido en cada fila */
     grid-template-areas: "header header header" "nav nav nav" "index contenido contenidoImg" "pie pie pie";
@@ -29,36 +20,21 @@ body{
     height: 98vh;   
 }
 
-
 /*----------------------------------------------------------------*/
 /* nombre de cada area del grid                 */
 /*----------------------------------------------------------------*/
-.header    { grid-area: header; font-size: 40px; font-family: 'Garamond'; font-style: italic; text-shadow: 0 0 4px #fa4646;}
+.header    { grid-area: header; font-size: 40px; font-family: 'Garamond'; font-style: italic; text-shadow: 0 0 4px #1D3557;}
 .nav       { grid-area: nav;   }
 .index     { grid-area: index;    }
-.contenido { grid-area: contenido; font-size: 16px; font-family: Verdana ; line-height: 21px; }
-.contenidoImg { grid-area: contenidoImg; font-family: Verdana; text-align: center; font-size: 13px;}
+.contenido { grid-area: contenido; font-size: 18px; font-family: Verdana ; line-height: 27px; }
+.contenidoImg { grid-area: contenidoImg; font-family: Verdana; text-align: center; font-size: 15px; line-height: 27px;}
 .pie       { grid-area: pie;      }
 
 
-/*----------------------------------------------------------------*/
-/* apariencia de cada item del grid                  */
-/*----------------------------------------------------------------*/
-.item {
-    background-color: #2d2d2eec;
-    padding: 11px;
-    color: white;
-    border-radius: 7px;
-    overflow: auto;
-}
 
-
-/*----------------------------------------------------------------*/
-/* Imagenes con bordes redondeados, con limites de tamaño           */
-/*----------------------------------------------------------------*/
 img {
     border-radius: 10%;
-    border: 2px solid #bb8510;
+    border: 2px solid #3993DD;
     width: 300px;
     height:250px;
     display: block; 
@@ -66,58 +42,6 @@ img {
     margin-left: auto;
   }
 
-.logo {
-    border-radius: 0%;
-    width: 50px;
-    height:50px;
-    border: 0px ;
-    vertical-align: middle;
-    float: left;
-}
-
-/* Barra de navegación con hover y que muestre el actual */
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #2d2d2eec;
-  }
-li{
-    float: left;
-  }
-li a{
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 11px 16px;
-}
-
-a:hover:not(.active){
-    background-color: #9b9b9b;
-}
-
-.active{
-    background-color: #bb8510;
-}
-
-
-
-/*saco color de links*/
-a{
-    color:white
-}
-a:link{
-    color: white;
-    text-decoration: none;
-}
-a:visited{
-    color: whitesmoke;
-    text-decoration: none;
-}
-a:hover{
-    text-decoration: underline;
-}
 
 /*Botones para el index DOM*/
 .boton{
@@ -125,8 +49,66 @@ a:hover{
     text-overflow: ellipsis;
     width: 100%;
     height: 45px;
-    color: #fa4646;
-    background-color: #202020;
-    border: 1px solid #bb8510;
+    color: black;
+    background-color: #d3c7cb;
+    border: 1px solid #3993DD;
+    box-shadow: 0px 1px 2px 1px;
     
 }
+
+.boton:hover{
+    background-color: #F0E2E7;
+}
+.boton:active{
+    box-shadow: 0px 0px 1px 0px;
+}
+
+/* Codigo para responsive   */
+
+
+/*tamaño grande deberia ser el por defecto*/
+
+@media only screen and (max-width: 1024px) {
+    /*medio */
+    .container {
+        display: grid;
+    
+     
+        grid-template: 74px 42px auto auto 40px/ 15% 85%;
+
+        /* Distribuimos el contenido en cada fila */
+        grid-template-areas: "header header " "nav nav " "index contenido " "index contenidoImg " "pie pie";
+    
+        /* separamos los items con gap */
+        gap: 6px;
+    
+        /* Hacemos que el diseño ocupe casi el alto total del navegador */
+        height: auto;   
+    }
+    .contenido {  height: fit-content;}
+    .contenidoImg {height: fit-content; }
+  }
+
+  @media only screen and (max-width: 680px) {
+    /*chico*/
+    .container {
+        display: grid;
+    
+     
+        grid-template: 74px 42px auto auto auto 40px/ 100%;
+    
+        /* Distribuimos el contenido en cada fila */
+        grid-template-areas: "header  " "nav  " "index" "contenido " " contenidoImg " " pie";
+    
+        /* separamos los items con gap */
+        gap: 6px;
+    
+        /* Hacemos que el diseño ocupe casi el alto total del navegador */
+        height: auto;   
+    }
+    .contenido {  height: fit-content;}
+    .contenidoImg {height: fit-content; }
+    .index{height: auto;}
+    
+
+  }
