@@ -15,7 +15,14 @@
     width: 360px;
     height:300px;
     animation-name: anim;
-    animation-duration: 3s;
+    animation-duration: 1.5s;
+  }
+
+  .img {
+    
+    width: 360px;
+    height:300px;
+
   }
 
 .boton{
